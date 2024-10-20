@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porfolio</title>
+  </head>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="contact-form.css" rel="stylesheet" />
+  <link href="header-styles.css" rel="stylesheet" />
+  <script src="./script.js"></script>
+
+  <body>
+    <div class="header">
+      <div class="profile">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" />
+        <h2>Shankar Kannan</h2>
+        <p>Web Developer</p>
+        <button id="emailButton">Email me</button>
+        <script>
+          function scrollToBottom() {
+            console.log("clicked");
+            window.scrollTo({
+              top: document.body.scrollHeight,
+              behavior: "smooth", // Smooth scrolling
+            });
+          }
+          document
+            .getElementById("emailButton")
+            .addEventListener("click", () => {
+              scrollToBottom(); // Call the scroll function here
+            });
+        </script>
+      </div>
+      <div class="about">
+        <h3>About Me</h3>
+        <p>
+          I am a tech-savvy individual pursuing a Bachelor's degree in
+          Engineering, seeking employment as a software developer. I am
+          passionate about consistently advancing my knowledge and skills.
+        </p>
+        <div class="buttons">
+          <button><a download="./ShankarResume.pdf" href="./shankarResume.pdf"> Resume </a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-bio">
+      <h3>Projects Overview</h3>
+      <p>
+        Here is a brief overview of some of the projects I've worked on,
+        demonstrating my skills.
+      </p>
+      <div class="project-buttons">
+        <p>See More Projects in my github :</p>
+        <button><a href="https://github.com/Shanks132">GitHub</a></button>
+      </div>
+    </div>
+
+    <div class="projects">
+      <div class="project">
+        <div>
+          <h3>Quiz game in reactJS</h3>
+          <div class="project-pic">
+            <img
+              id="project-image1"
+              src="./img/p1image1.png"
+              alt="Project Image"
+            />
+          </div>
+          <div>
+            <button onclick="changeImage(-1)">Previous</button>
+            <button onclick="changeImage(1)">Next</button>
+          </div>
+        </div>
+        <div class="about-project" style="padding-top: 10px">
+          <li>
+            This project involves building a quiz game using ReactJS, where
+            players can answer multiple-choice questions and receive immediate
+            feedback on their answers.
+          </li>
+          <li style="padding-top: 10px">
+            The app tracks scores, supports various question categories, and
+            provides a dynamic and interactive user experience.
+          </li>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-pic">
+          <h3>Task Manager using ReactJS</h3>
+          <img
+            id="project-image2"
+            src="./img/p2image1.png"
+            alt="Project Image"
+          />
+          <div>
+            <button onclick="changeImage2(-1)">Previous</button>
+            <button onclick="changeImage2(1)">Next</button>
+          </div>
+        </div>
+        <div class="about-project" style="padding-top: 10px">
+          <li>
+            This project involves developing a task management app using
+            ReactJS, where users can create, update, and track tasks, with the
+            app hosted on AWS for scalability and reliability.
+          </li>
+          <li style="padding-top: 10px">
+            It leverages AWS services for deployment, backend integration, and
+            data storage, ensuring a seamless user experience and cloud-based
+            performance.
+          </li>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-pic">
+          <h3>Arduino and Bluetooth secure door lock</h3>
+
+          <img
+            id="project-image3"
+            src="./img/p3image1.png"
+            alt="Project Image"
+          />
+          <div>
+            <button onclick="changeImage3(-1)">Previous</button>
+            <button onclick="changeImage3(1)">Next</button>
+          </div>
+        </div>
+        <div class="about-project" style="padding-top: 10px">
+          <ul>
+            <li>
+              This project features a door lock system built with Arduino, which
+              allows unlocking via a Bluetooth-based mobile app. It
+            </li>
+            <li style="padding-top: 10px">
+              Utilizes a Bluetooth module to communicate with the Arduino,
+              enabling users to control the lock remotely through their
+              smartphones for a secure and convenient access solution.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+            />
+
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+            ></textarea>
+
+            <button type="submit" id="submit-button" onclick="sendEmail(event)">
+              Submit
+            </button>
+          </form>
+          <p id="error-message" style="color: red"></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

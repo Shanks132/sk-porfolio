@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+.header {
+  display: flex;
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.profile {
+  color: #141414;
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+  flex: 1;
+}
+.profile img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.profile h2 {
+  margin: 15px 0 5px;
+  font-size: 24px;
+}
+.profile p{
+  color: #252323;
+  margin-bottom: 15px;
+}
+.profile button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.social-icons a {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
+button:hover{
+  background-color: #3a3636;
+}
+.about {
+  flex: 1;
+  flex: 1;
+  background-color: #b0b0b0;
+  padding: 30px;
+  color: #111010;
+}
+.about h3, .project-info h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.about p, .project-info p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111010;
+}
+.about .buttons {
+  margin-top: 20px;
+}
+.about .buttons button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}.about .buttons button:hover{
+  background-color: #666;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column; /* Stack header elements vertically */
+      margin: 20px; /* Reduce margin for mobile */
+  }
+
+  .profile, .about {
+      padding: 20px; /* Reduce padding for mobile */
+      text-align: center; /* Center text for better layout */
+  }
+
+  .profile img {
+      width: 100px; /* Smaller profile image */
+      height: 100px; /* Maintain aspect ratio */
+  }
+
+  .profile h2 {
+      font-size: 20px; /* Adjust heading size */
+  }
+
+  .profile p {
+      font-size: 14px; /* Adjust paragraph size */
+  }
+
+  .about h3 {
+      font-size: 24px; /* Adjust heading size */
+  }
+
+  .about p {
+      font-size: 14px; /* Adjust paragraph size */
+  }
+
+  .social-icons {
+      flex-direction: column; /* Stack social icons vertically */
+      gap: 10px; /* Adjust spacing */
+  }
+
+  .about .buttons {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center; /* Center buttons */
+  }
+
+  .about .buttons button {
+      width: 100%; /* Full width buttons */
+      margin-bottom: 10px; /* Space between buttons */
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .header {
+      margin: 10px; /* Further reduce margin for very small screens */
+  }
+
+  .profile h2 {
+      font-size: 18px; /* Smaller heading size */
+  }
+
+  .about h3 {
+      font-size: 20px; /* Smaller heading size */
+  }
+
+  .about p {
+      font-size: 12px; /* Smaller paragraph size */
+  }
+}
